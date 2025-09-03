@@ -258,7 +258,7 @@ const Hero = () => {
             className="flex-shrink-0"
           >
             <img 
-              src="/media/memoji.png" 
+              src="/memoji.png" 
               alt="Jose Vinueza Memoji" 
               className="w-64 h-64 lg:w-96 lg:h-96 object-contain"
             />

@@ -402,7 +402,7 @@ const Projects = () => {
       accent: 'text-purple-300',
       links: {
         live: '#',
-        github: 'https://github.com/josevinueza/ai-agent-chat'
+        github: 'https://github.com/Josevinuez/ai-agent-chat'
       }
     },
     {
@@ -424,7 +424,7 @@ const Projects = () => {
       accent: 'text-orange-300',
       links: {
         live: '#',
-        github: 'https://github.com/josevinueza/zoho-crm-integration'
+        github: 'https://github.com/Josevinuez/zoho-crm-integration'
       }
     },
     {
@@ -446,7 +446,7 @@ const Projects = () => {
       accent: 'text-blue-300',
       links: {
         live: '#',
-        github: 'https://github.com/josevinueza/tradein-pro'
+        github: 'https://github.com/Josevinuez/tradein-pro'
       }
     },
     {
@@ -468,7 +468,7 @@ const Projects = () => {
       accent: 'text-emerald-300',
       links: {
         live: '#',
-        github: 'https://github.com/josevinueza/prom-planner'
+        github: 'https://github.com/Josevinuez/prom-planner'
       }
     },
     {
@@ -490,7 +490,7 @@ const Projects = () => {
       accent: 'text-indigo-300',
       links: {
         live: '#',
-        github: 'https://github.com/josevinueza/battleship-game'
+        github: 'https://github.com/Josevinuez/battleship-game'
       }
     }
   ]

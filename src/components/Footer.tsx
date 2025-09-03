@@ -15,7 +15,7 @@ const Footer = () => {
   ]
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/josevinueza', icon: Github },
+    { name: 'GitHub', href: 'https://github.com/Josevinuez', icon: Github },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jose-vinueza-agq', icon: Linkedin },
     { name: 'Email', href: 'mailto:vinu0002@algonquinlive.com', icon: Mail },
   ]

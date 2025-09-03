@@ -74,7 +74,7 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/josevinueza',
+      href: 'https://github.com/Josevinuez',
       icon: Github,
       color: 'hover:text-gray-900 dark:hover:text-white'
     },

@@ -33,7 +33,7 @@ const Hero = () => {
   }
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/josevinueza', icon: Github },
+    { name: 'GitHub', href: 'https://github.com/Josevinuez', icon: Github },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jose-vinueza-agq', icon: Linkedin },
     { name: 'Email', href: 'mailto:vinu0002@algonquinlive.com', icon: Mail },
   ]
@@ -195,8 +195,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            Experienced Technical Application Consultant with a proven track record of increasing customer system efficiency by 30%. 
-            Computer Engineering Technology graduate from Algonquin College with a 3.61 GPA and Dean's Honours List recognition.
+                    I build reliable software, solve complex technical challenges, and deliver customer-focused solutions that make systems faster, more efficient, and easier to use.
           </motion.p>
 
           {/* CTA Buttons */}

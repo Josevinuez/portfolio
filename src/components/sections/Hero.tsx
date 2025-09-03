@@ -1,13 +1,28 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react'
+import { ChevronDown, Github, Linkedin, Mail, Download, Loader2 } from 'lucide-react'
 import { cn } from '@utils/cn'
+import { generateFullSitePDF } from '@utils/generatePDF'
+import { useState } from 'react'
 
 const Hero = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
+  
+  const [isGeneratingPDF, setIsGeneratingPDF] = useState(false)
+
+  const handleDownloadResume = async () => {
+    setIsGeneratingPDF(true)
+    try {
+      await generateFullSitePDF()
+    } catch (error) {
+      console.error('Error generating PDF:', error)
+    } finally {
+      setIsGeneratingPDF(false)
+    }
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -212,16 +227,20 @@ const Hero = () => {
               View My Work
             </motion.a>
             
-            <motion.a
-              href="/resume.pdf"
-              download
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 font-semibold rounded-xl transition-all"
+            <motion.button
+              onClick={handleDownloadResume}
+              disabled={isGeneratingPDF}
+              whileHover={{ scale: isGeneratingPDF ? 1 : 1.05 }}
+              whileTap={{ scale: isGeneratingPDF ? 1 : 0.95 }}
+              className="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 font-semibold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume
-            </motion.a>
+              {isGeneratingPDF ? (
+                <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+              ) : (
+                <Download className="w-5 h-5 mr-2" />
+              )}
+              {isGeneratingPDF ? 'Generating PDF...' : 'Download Resume'}
+            </motion.button>
           </motion.div>
 
           {/* Social Links */}
